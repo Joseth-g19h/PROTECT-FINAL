@@ -1,0 +1,29 @@
+{
+  "name": "protect-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "img-modal-image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joseth-g19h/PROTECT-FINAL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joseth-g19h/PROTECT-FINAL/issues"
+  },
+  "homepage": "https://github.com/Joseth-g19h/PROTECT-FINAL#readme",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
+  }
+}
