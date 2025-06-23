@@ -1503,7 +1503,6 @@ cursor: pointer;
 
 #button2sb6{
   font-family: 'Arapey', serif;
-
   height: 40px;
   width: 200px;
   background: none;
@@ -1763,7 +1762,6 @@ cursor: pointer;
 
 #button2sb9{
   font-family: 'Arapey', serif;
-
   height: 40px;
   width: 200px;
   background: none;
@@ -2708,7 +2706,6 @@ cursor: pointer;
   
   #button2sb9{
     font-family: 'Arapey', serif;
-  
     height: 30px;
     width: 100px;
     background: none;
@@ -2747,7 +2744,7 @@ cursor: pointer;
     margin: 0;
     font-family: 'Arapey', serif;
     font-weight: bolder;
-    color: white;;
+    color: white;
     font-size: 15px;
   }
   
@@ -3277,8 +3274,6 @@ cursor: pointer;
     margin-right: 30px;
     height: 30px;
     width: 100px;
-  
-  
   }
   
   #button2sb5{
@@ -4992,5 +4987,4 @@ cursor: pointer;
   }
 
 }
-
 

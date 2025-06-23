@@ -19,11 +19,12 @@ var signageboardoptionssection = document.getElementById("signageboardoptionssec
 
 
 
-var signageboardservice1 = db.collection("advertisingprojectservice").doc("advertisingproject");
+
+var signageboardservice1 = db.collection("customprintingservice").doc("customprintinginfo");
 // var signageboardservice2 = db.collection("signageboardservice").doc("signageboard2");
 // var signageboardservice3 = db.collection("signageboardservice").doc("signageboard3");
 // var signageboardservice4 = db.collection("signageboardservice").doc("signageboard4");
-var totalServicesRef = db.collection("advertisingprojectservice").doc("totalServices");
+var totalServicesRef = db.collection("customprintingservice").doc("totalServices");
 
 var totalservices;
 var totalservicestemp;
@@ -129,8 +130,8 @@ totalServicesRef.get().then(function (doc) {
 
           // sbbox1image[extrachecking2].style.width = "250px";
           // sbbox1image[extrachecking2].style.height = "250px";
-          
-          
+
+
 
           sbbox1image[extrachecking2].style.border = "3px solid white"
           sbbox1image[extrachecking2].style.borderRadius = "200px";
@@ -144,7 +145,7 @@ totalServicesRef.get().then(function (doc) {
           extrachecking2++;
 
 
-          storageRef.child('Advertisingproject/sb1.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb1.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image0');
             img.src = url;
           }).catch(function (error) {
@@ -152,7 +153,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb2.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb2.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image1');
             img.src = url;
           }).catch(function (error) {
@@ -160,7 +161,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb3.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb3.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image2');
             img.src = url;
           }).catch(function (error) {
@@ -168,7 +169,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb4.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb4.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image3');
             img.src = url;
           }).catch(function (error) {
@@ -176,7 +177,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb5.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb5.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image4');
             img.src = url;
           }).catch(function (error) {
@@ -184,7 +185,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb6.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb6.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image5');
             img.src = url;
           }).catch(function (error) {
@@ -192,7 +193,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb7.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb7.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image6');
             img.src = url;
           }).catch(function (error) {
@@ -200,7 +201,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb8.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb8.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image7');
             img.src = url;
           }).catch(function (error) {
@@ -208,7 +209,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb9.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb9.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image8');
             img.src = url;
           }).catch(function (error) {
@@ -216,7 +217,7 @@ totalServicesRef.get().then(function (doc) {
             img.alt = "Check your internet connection";
           });
 
-          storageRef.child('Advertisingproject/sb10.jpg').getDownloadURL().then(function (url) {
+          storageRef.child('Customprinting/sb10.jpg').getDownloadURL().then(function (url) {
             var img = document.getElementById('sbbox1image9');
             img.src = url;
           }).catch(function (error) {
@@ -312,14 +313,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -355,13 +356,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode = document.createTextNode("Contact Us");
         button1sb.appendChild(button1sbnode);
 
-        // var button2sb = document.createElement("button");
-        // var button2sbnode = document.createTextNode("Order Request");
-        // button2sb.appendChild(button2sbnode);
+        var button2sb = document.createElement("button");
+        var button2sbnode = document.createTextNode("Order Request");
+        button2sb.appendChild(button2sbnode);
 
 
         buttonsdivsb.appendChild(button1sb);
-        // buttonsdivsb.appendChild(button2sb);
+        buttonsdivsb.appendChild(button2sb);
 
         aboutdivsb.appendChild(buttonsdivsb);
 
@@ -369,6 +370,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -380,12 +388,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb.id = "aboutdivsb";
         buttonsdivsb.id = "buttonsdivsb";
         button1sb.id = "button1sb";
-        // button2sb.id = "button2sb";
+        button2sb.id = "button2sb";
 
 
         signageboardindividualdetail.appendChild(sbbox1x);
 
-        storageRef.child('Advertisingproject/sb1.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb1.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex');
           img.src = url;
         }).catch(function (error) {
@@ -481,14 +489,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -524,21 +532,27 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode2 = document.createTextNode("Contact Us");
         button1sb2.appendChild(button1sbnode2);
 
-        // var button2sb2 = document.createElement("button");
-        // var button2sbnode2 = document.createTextNode("Order Request");
-        // button2sb2.appendChild(button2sbnode2);
+        var button2sb2 = document.createElement("button");
+        var button2sbnode2 = document.createTextNode("Order Request");
+        button2sb2.appendChild(button2sbnode2);
 
 
         buttonsdivsb2.appendChild(button1sb2);
-        // buttonsdivsb2.appendChild(button2sb2);
+        buttonsdivsb2.appendChild(button2sb2);
 
         aboutdivsb2.appendChild(buttonsdivsb2);
-
 
         button1sb2.addEventListener("click", () => {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb2.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -550,12 +564,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb2.id = "aboutdivsb2";
         buttonsdivsb2.id = "buttonsdivsb2";
         button1sb2.id = "button1sb2";
-        // button2sb2.id = "button2sb2";
+        button2sb2.id = "button2sb2";
 
 
         signageboardindividualdetail.appendChild(sbbox1x2);
 
-        storageRef.child('Advertisingproject/sb2.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb2.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex2');
           img.src = url;
         }).catch(function (error) {
@@ -652,14 +666,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -695,21 +709,27 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode3 = document.createTextNode("Contact Us");
         button1sb3.appendChild(button1sbnode3);
 
-        // var button2sb3 = document.createElement("button");
-        // var button2sbnode3 = document.createTextNode("Order Request");
-        // button2sb3.appendChild(button2sbnode3);
+        var button2sb3 = document.createElement("button");
+        var button2sbnode3 = document.createTextNode("Order Request");
+        button2sb3.appendChild(button2sbnode3);
 
 
         buttonsdivsb3.appendChild(button1sb3);
-        // buttonsdivsb3.appendChild(button2sb3);
+        buttonsdivsb3.appendChild(button2sb3);
 
         aboutdivsb3.appendChild(buttonsdivsb3);
-
 
         button1sb3.addEventListener("click", () => {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb3.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
         sbbox1x3.id = "sbbox1x3";
@@ -720,12 +740,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb3.id = "aboutdivsb3";
         buttonsdivsb3.id = "buttonsdivsb3";
         button1sb3.id = "button1sb3";
-        // button2sb3.id = "button2sb3";
+        button2sb3.id = "button2sb3";
 
 
         signageboardindividualdetail.appendChild(sbbox1x3);
 
-        storageRef.child('Advertisingproject/sb3.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb3.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex3');
           img.src = url;
         }).catch(function (error) {
@@ -821,14 +841,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -865,13 +885,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode4 = document.createTextNode("Contact Us");
         button1sb4.appendChild(button1sbnode4);
 
-        // var button2sb4 = document.createElement("button");
-        // var button2sbnode4 = document.createTextNode("Order Request");
-        // button2sb4.appendChild(button2sbnode4);
+        var button2sb4 = document.createElement("button");
+        var button2sbnode4 = document.createTextNode("Order Request");
+        button2sb4.appendChild(button2sbnode4);
 
 
         buttonsdivsb4.appendChild(button1sb4);
-        // buttonsdivsb4.appendChild(button2sb4);
+        buttonsdivsb4.appendChild(button2sb4);
 
         aboutdivsb4.appendChild(buttonsdivsb4);
 
@@ -879,6 +899,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb4.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -890,12 +917,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb4.id = "aboutdivsb4";
         buttonsdivsb4.id = "buttonsdivsb4";
         button1sb4.id = "button1sb4";
-        // button2sb4.id = "button2sb4";
+        button2sb4.id = "button2sb4";
 
 
         signageboardindividualdetail.appendChild(sbbox1x4);
 
-        storageRef.child('Advertisingproject/sb4.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb4.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex4');
           img.src = url;
         }).catch(function (error) {
@@ -992,14 +1019,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -1035,20 +1062,28 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode5 = document.createTextNode("Contact Us");
         button1sb5.appendChild(button1sbnode5);
 
-        // var button2sb5 = document.createElement("button");
-        // var button2sbnode5 = document.createTextNode("Order Request");
-        // button2sb5.appendChild(button2sbnode5);
+        var button2sb5 = document.createElement("button");
+        var button2sbnode5 = document.createTextNode("Order Request");
+        button2sb5.appendChild(button2sbnode5);
 
 
         buttonsdivsb5.appendChild(button1sb5);
-        // buttonsdivsb5.appendChild(button2sb5);
+        buttonsdivsb5.appendChild(button2sb5);
 
         aboutdivsb5.appendChild(buttonsdivsb5);
+
 
         button1sb5.addEventListener("click", () => {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb5.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -1060,12 +1095,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb5.id = "aboutdivsb5";
         buttonsdivsb5.id = "buttonsdivsb5";
         button1sb5.id = "button1sb5";
-        // button2sb5.id = "button2sb5";
+        button2sb5.id = "button2sb5";
 
 
         signageboardindividualdetail.appendChild(sbbox1x5);
 
-        storageRef.child('Advertisingproject/sb5.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb5.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex5');
           img.src = url;
         }).catch(function (error) {
@@ -1162,14 +1197,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -1207,13 +1242,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode6 = document.createTextNode("Contact Us");
         button1sb6.appendChild(button1sbnode6);
 
-        // var button2sb6 = document.createElement("button");
-        // var button2sbnode6 = document.createTextNode("Order Request");
-        // button2sb6.appendChild(button2sbnode6);
+        var button2sb6 = document.createElement("button");
+        var button2sbnode6 = document.createTextNode("Order Request");
+        button2sb6.appendChild(button2sbnode6);
 
 
         buttonsdivsb6.appendChild(button1sb6);
-        // buttonsdivsb6.appendChild(button2sb6);
+        buttonsdivsb6.appendChild(button2sb6);
 
         aboutdivsb6.appendChild(buttonsdivsb6);
 
@@ -1221,6 +1256,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb6.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -1232,12 +1274,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb6.id = "aboutdivsb6";
         buttonsdivsb6.id = "buttonsdivsb6";
         button1sb6.id = "button1sb6";
-        // button2sb6.id = "button2sb6";
+        button2sb6.id = "button2sb6";
 
 
         signageboardindividualdetail.appendChild(sbbox1x6);
 
-        storageRef.child('Advertisingproject/sb6.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb6.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex6');
           img.src = url;
         }).catch(function (error) {
@@ -1333,14 +1375,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -1378,13 +1420,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode7 = document.createTextNode("Contact Us");
         button1sb7.appendChild(button1sbnode7);
 
-        // var button2sb7 = document.createElement("button");
-        // var button2sbnode7 = document.createTextNode("Order Request");
-        // button2sb7.appendChild(button2sbnode7);
+        var button2sb7 = document.createElement("button");
+        var button2sbnode7 = document.createTextNode("Order Request");
+        button2sb7.appendChild(button2sbnode7);
 
 
         buttonsdivsb7.appendChild(button1sb7);
-        // buttonsdivsb7.appendChild(button2sb7);
+        buttonsdivsb7.appendChild(button2sb7);
 
         aboutdivsb7.appendChild(buttonsdivsb7);
 
@@ -1392,6 +1434,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb7.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -1403,12 +1452,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb7.id = "aboutdivsb7";
         buttonsdivsb7.id = "buttonsdivsb7";
         button1sb7.id = "button1sb7";
-        // button2sb7.id = "button2sb7";
+        button2sb7.id = "button2sb7";
 
 
         signageboardindividualdetail.appendChild(sbbox1x7);
 
-        storageRef.child('Advertisingproject/sb7.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb7.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex7');
           img.src = url;
         }).catch(function (error) {
@@ -1504,14 +1553,14 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
@@ -1548,13 +1597,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode8 = document.createTextNode("Contact Us");
         button1sb8.appendChild(button1sbnode8);
 
-        // var button2sb8 = document.createElement("button");
-        // var button2sbnode8 = document.createTextNode("Order Request");
-        // button2sb8.appendChild(button2sbnode8);
+        var button2sb8 = document.createElement("button");
+        var button2sbnode8 = document.createTextNode("Order Request");
+        button2sb8.appendChild(button2sbnode8);
 
 
         buttonsdivsb8.appendChild(button1sb8);
-        // buttonsdivsb8.appendChild(button2sb8);
+        buttonsdivsb8.appendChild(button2sb8);
 
         aboutdivsb8.appendChild(buttonsdivsb8);
 
@@ -1562,6 +1611,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb8.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -1573,12 +1629,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb8.id = "aboutdivsb8";
         buttonsdivsb8.id = "buttonsdivsb8";
         button1sb8.id = "button1sb8";
-        // button2sb8.id = "button2sb8";
+        button2sb8.id = "button2sb8";
 
 
         signageboardindividualdetail.appendChild(sbbox1x8);
 
-        storageRef.child('Advertisingproject/sb8.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb8.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex8');
           img.src = url;
         }).catch(function (error) {
@@ -1674,18 +1730,17 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
-
 
         var sbbox1x9 = document.createElement("div");
         var sbbox1imageax9 = document.createElement("a");
@@ -1719,13 +1774,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode9 = document.createTextNode("Contact Us");
         button1sb9.appendChild(button1sbnode9);
 
-        // var button2sb9 = document.createElement("button");
-        // var button2sbnode9 = document.createTextNode("Order Request");
-        // button2sb9.appendChild(button2sbnode9);
+        var button2sb9 = document.createElement("button");
+        var button2sbnode9 = document.createTextNode("Order Request");
+        button2sb9.appendChild(button2sbnode9);
 
 
         buttonsdivsb9.appendChild(button1sb9);
-        // buttonsdivsb9.appendChild(button2sb9);
+        buttonsdivsb9.appendChild(button2sb9);
 
         aboutdivsb9.appendChild(buttonsdivsb9);
 
@@ -1737,6 +1792,13 @@ totalServicesRef.get().then(function (doc) {
         });
 
 
+        button2sb9.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
+        });
+
+
         sbbox1x9.id = "sbbox1x9";
         sbbox1headx9.id = "sbbox1headx9";
         sbbox1head2x9.id = "sbbox1head2x9";
@@ -1745,12 +1807,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb9.id = "aboutdivsb9";
         buttonsdivsb9.id = "buttonsdivsb9";
         button1sb9.id = "button1sb9";
-        // button2sb9.id = "button2sb9";
+        button2sb9.id = "button2sb9";
 
 
         signageboardindividualdetail.appendChild(sbbox1x9);
 
-        storageRef.child('Advertisingproject/sb9.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb9.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex9');
           img.src = url;
         }).catch(function (error) {
@@ -1846,19 +1908,18 @@ totalServicesRef.get().then(function (doc) {
 
         function myFunction(x) {
           if (x.matches) { // If media query matches
-            signageboardindividualdetail.style.height="1000px";
+            signageboardindividualdetail.style.height = "1000px";
           } else {
             signageboardindividualdetail.style.height = "800px";
 
 
           }
         }
-        
+
         var x = window.matchMedia("(max-width: 1130px)")
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
 
-        
         var sbbox1x10 = document.createElement("div");
         var sbbox1imageax10 = document.createElement("a");
         var sbbox1imagex10 = document.createElement("img");
@@ -1891,13 +1952,13 @@ totalServicesRef.get().then(function (doc) {
         var button1sbnode10 = document.createTextNode("Contact Us");
         button1sb10.appendChild(button1sbnode10);
 
-        // var button2sb10 = document.createElement("button");
-        // var button2sbnode10 = document.createTextNode("Order Request");
-        // button2sb10.appendChild(button2sbnode10);
+        var button2sb10 = document.createElement("button");
+        var button2sbnode10 = document.createTextNode("Order Request");
+        button2sb10.appendChild(button2sbnode10);
 
 
         buttonsdivsb10.appendChild(button1sb10);
-        // buttonsdivsb10.appendChild(button2sb10);
+        buttonsdivsb10.appendChild(button2sb10);
 
         aboutdivsb10.appendChild(buttonsdivsb10);
 
@@ -1905,6 +1966,13 @@ totalServicesRef.get().then(function (doc) {
           var extraa = document.createElement("a");
           extraa.href = "tel:+919852559968";
           extraa.click();
+        });
+
+
+        button2sb10.addEventListener("click", () => {
+          var extra2 = document.createElement("a");
+          extra2.href = "/orderrequest";
+          extra2.click();
         });
 
 
@@ -1916,12 +1984,12 @@ totalServicesRef.get().then(function (doc) {
         aboutdivsb10.id = "aboutdivsb10";
         buttonsdivsb10.id = "buttonsdivsb10";
         button1sb10.id = "button1sb10";
-        // button2sb10.id = "button2sb10";
+        button2sb10.id = "button2sb10";
 
 
         signageboardindividualdetail.appendChild(sbbox1x10);
 
-        storageRef.child('Advertisingproject/sb10.jpg').getDownloadURL().then(function (url) {
+        storageRef.child('Customprinting/sb10.jpg').getDownloadURL().then(function (url) {
           var img = document.getElementById('sbbox1imagex10');
           img.src = url;
         }).catch(function (error) {
@@ -1949,19 +2017,19 @@ totalServicesRef.get().then(function (doc) {
 });
 
 
-var contactphone= document.getElementById("contactphone");
+var contactphone = document.getElementById("contactphone");
 
 
-var conphone = db.collection("Contactinfo").doc("info"); 
+var conphone = db.collection("Contactinfo").doc("info");
 
 
-conphone.get().then(function (doc) {  
+conphone.get().then(function (doc) {
   if (doc.exists) {
     var sbservicedataxy = doc.data();
-    contactphone.innerHTML=sbservicedataxy.number;
+    contactphone.innerHTML = sbservicedataxy.number;
   }
 }).catch(function (error) {
-  contactphone.innerHTML="Check your internet connection";
+  contactphone.innerHTML = "Check your internet connection";
 });
 
 

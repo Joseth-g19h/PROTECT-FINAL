@@ -4718,6 +4718,102 @@ cursor: pointer;
 
 }
 
+#contacthome{
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.92);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+#contactdetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+
+#contactlogo{
+  height: 150px;
+  width: 300px;
+  margin: 0;
+}
+
+#contactaddress{
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Trocchi', serif;
+  color: white;
+}
+
+#contactphone{
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Trocchi', serif;
+  color: white;
+}
+
+#contactemail{
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Trocchi', serif;
+  color: white;
+}
+
+#socialHandlesx{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.handlesx:hover{
+  transform: scale(1.2);
+ }
+
+#facebookhandleimagex{
+  margin-right: 10px;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+#instahandleimagex{
+  margin-right: 10px;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+
+#crcontent{
+  font-family: 'Trocchi', serif;
+  font-size: 15px;
+  color: white;
+  margin: 0;
+}
+
+@media only screen and (max-width:300px)
+{
+  #contactlogo{
+    height: 130px;
+    width: 250px;
+    margin: 0;
+  }
+
+}
+
 
 #contacthome{
   width: 100%;
@@ -4992,5 +5088,3 @@ cursor: pointer;
   }
 
 }
-
-
