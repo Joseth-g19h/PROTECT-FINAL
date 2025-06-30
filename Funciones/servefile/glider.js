@@ -449,6 +449,7 @@
     return breakpointChanged
   }
 
+  
   gliderPrototype.scrollTo = function (scrollTarget, scrollDuration, callback) {
     var _ = this
 
