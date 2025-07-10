@@ -1,19 +1,14 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import React from 'react';
+import Header from './header';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios.get("http://localhost:5000/api")
-      .then((res) => setMessage(res.data.message))
-      .catch((err) => console.error(err));
-  }, []);
-
   return (
     <div>
-      <h1>Frontend con Vite + React</h1>
-      <p>Mensaje del backend: <strong>{message}</strong></p>
+      <Header />
+      <main style={{ padding: '2rem' }}>
+        <h1>Bienvenido a MiSitio</h1>
+        <p>Este es el contenido de tu página principal.</p>
+      </main>
     </div>
   );
 }

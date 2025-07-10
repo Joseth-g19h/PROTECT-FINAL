@@ -7,7 +7,7 @@ const PORT = 5000;
 app.use(cors()); // Permitir conexión con el frontend
 app.use(express.json());
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Hola desde el backend!" });
 });
 
