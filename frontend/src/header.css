@@ -1,29 +1,123 @@
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(90deg, #4e54c8, #8f94fb);
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: sticky;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.hgo-header {
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  min-height: 60px;
+}
+
+.hgo-left-section {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.hgo-logo {
+  display: flex;
+  align-items: center;
+}
+
+.hgo-logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.hgo-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8B1538;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.nav-links a {
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
   color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 500;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-item:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.divider {
+  color: #c49e61;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.hgo-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 4px;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ffd700;
+.hgo-nav a:hover {
+  background-color: #8B1538;
+  color: #c49e61;
+}
+
+.divider {
+  color: #c49e61;
+  font-weight: bold;
+}
+
+.hgo-icon-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #c49e61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  color: white;
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 30px;
 }
