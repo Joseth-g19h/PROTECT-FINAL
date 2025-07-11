@@ -16,7 +16,7 @@ const Header = () => {
     <header className="hgo-header">
       <div className="hgo-left-section">
         <div className="hgo-logo">
-          <img src="/path-to-your-logo.png" alt="Hidalgo.gob.mx" />
+          <img src="/src/img/Logo_gob_hidalgo.svg" alt="Hidalgo.gob.mx" />
         </div>
         <nav className="hgo-nav">
           <div 
