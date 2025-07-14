@@ -1,17 +1,13 @@
 import React from 'react';
-import Header from './header';
-
+import Header from './header'; // Asegúrate que 'header.jsx' está en la misma carpeta
 
 function App() {
   return (
     <>
-      <div>
-        <header />
-        <main style={{ padding: '2rem' }}>
-          <h1>Bienvenido a MiSitio</h1>
-          <p>Este es el contenido de tu página principal.</p>
-        </main>
-      </div>
+      <Header /> {/* Aquí se renderiza tu header */}
+      <main style={{ padding: '2rem' }}>
+        <h1> Bienvenido a mi Sitio</h1>
+      </main>
     </>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Header.css'; // Asegúrate de importar el CSS
+import './header.css'; // Asegúrate de importar el CSS
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -86,4 +85,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header
