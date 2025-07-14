@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './Header.css'; // Asegúrate de importar el CSS
 
 const Header = () => {
@@ -27,10 +28,10 @@ const Header = () => {
             <a href="#">GOBIERNO</a>
             {activeDropdown === 'gobierno' && (
               <div className="dropdown-menu">
-                <a href="#" className="dropdown-item">GOBERNADOR</a>
-                <a href="#" className="dropdown-item">DEPENDENCIAS ESTATALES</a>
-                <a href="#" className="dropdown-item">DEPENDENCIAS FEDERALES</a>
-                <a href="#" className="dropdown-item">GABINETE</a>
+                <a href="#" className="dropdown-item">Gobernador</a>
+                <a href="#" className="dropdown-item">Depedencias estatalas</a>
+                <a href="#" className="dropdown-item">Dependencias federales</a>
+                <a href="#" className="dropdown-item">Gabinete</a>
               </div>
             )}
           </div>
@@ -73,9 +74,6 @@ const Header = () => {
             <a href="#">PAGOS</a>
             {activeDropdown === 'pagos' && (
               <div className="dropdown-menu">
-                <a href="#" className="dropdown-item">Pagos en línea</a>
-                <a href="#" className="dropdown-item">Predial</a>
-                <a href="#" className="dropdown-item">Servicios</a>
               </div>
             )}
           </div>
