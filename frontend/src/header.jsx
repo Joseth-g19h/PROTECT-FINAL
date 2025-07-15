@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './header.css'; // Asegúrate de importar el CSS
 
+
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -79,9 +80,10 @@ const Header = () => {
         </nav>
       </div>
       <div className="hgo-icon-button">
-        <span className="material-icons">menu</span>
+        <img src="/src/img/Logo_buzon.svg" alt="Icono" className="hgo-icon-image" />
       </div>
     </header>
+
   );
 };
 

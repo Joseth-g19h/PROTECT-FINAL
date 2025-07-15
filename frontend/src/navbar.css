@@ -1,0 +1,108 @@
+/* Elimina espacios por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-vino {
+  background-color: #9b2241; /* vino */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2.5rem; /* Mantener el mismo padding del header */
+  font-family: 'Arial', sans-serif;
+  font-size: 0.99rem;
+  flex-wrap: nowrap;
+  width: 100vw; /* Usar 100vw para ocupar todo el ancho de la ventana */
+  box-sizing: border-box;
+  min-height: 60px;
+  overflow: hidden;
+  left: 0; /* Asegurar que empiece desde el borde izquierdo */
+  /* CAMBIO: Agregar margen superior igual a la altura del header */
+  margin: 0 ;
+  margin-top: 70px !important; /* Misma altura que el header (50px) */
+}
+
+.nombre-institucion {
+  font-weight: bold;
+  text-transform: uppercase;
+  flex: 0 0 auto; /* No crecer, no reducir, tamaño automático */
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 1rem;
+  white-space: nowrap; /* Mantener en una línea */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%; /* Máximo 50% del ancho */
+  font-size: 0.9rem; /* Tamaño más pequeño para evitar desbordamiento */
+}
+
+.nav-vino-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem; /* Espacio reducido entre enlaces */
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1; /* Permitir que se reduzca si es necesario */
+  flex-wrap: nowrap; /* Mantener en una línea */
+  justify-content: flex-end; /* Alinear a la derecha */
+}
+
+.nav-vino-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  white-space: nowrap;
+  padding: 0.5rem 0.6rem; /* Padding reducido */
+  border-radius: 4px;
+  font-size: 0.9rem; /* Tamaño más pequeño */
+}
+
+.nav-vino-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efecto hover más sutil */
+}
+
+/* Responsive - Solo para pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .navbar-vino {
+    padding: 0.6rem 1rem;
+    margin-top: 45px; /* Altura del header en móvil (45px) */
+  }
+  
+  .nombre-institucion {
+    font-size: 0.8rem;
+    max-width: 45%;
+  }
+  
+  .nav-vino-links {
+    gap: 0.8rem;
+  }
+  
+  .nav-vino-links li a {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-vino {
+    padding: 0.5rem 0.8rem;
+    margin-top: 45px; /* Mantener consistente con el media query anterior */
+  }
+  
+  .nombre-institucion {
+    font-size: 0.7rem;
+    max-width: 40%;
+  }
+  
+  .nav-vino-links {
+    gap: 0.5rem;
+  }
+  
+  .nav-vino-links li a {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
