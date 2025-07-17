@@ -1,17 +1,13 @@
 /* carousel.css - INTEGRADO CON OTROS COMPONENTES */
 .carousel-container {
-  width: 100% !important;
-  max-width: fixed;
-  margin: 0px auto;
-  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; /* ✅ Estándar para mantener flujo normal */
   overflow: hidden;
-  /* Forzar contexto de apilamiento */
   transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  /* Evitar saltos en zoom */
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
+
 
 .carousel-wrapper {
   position: relative;
