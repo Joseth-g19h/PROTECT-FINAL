@@ -1,95 +1,196 @@
+/* ihce.css */
 .ihce-container {
   width: 100%;
-  padding: 2rem;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  padding: 1rem 1rem;
+  background: #ffffff;
+  margin-top: 0px;
 }
 
 .ihce-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  gap: 2rem;
-  max-width: 1000px;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Fila superior: SVG + 2 columnas de texto */
+.ihce-top-row {
+  display: flex;
+  gap: 0.5rem;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .ihce-icon {
-  flex: 1;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid #7b1f3c;
+  min-height: 280px;
+  width: 220px;
 }
 
 .ihce-icon img {
-  width: 140px; /* icono más grande */
-  max-width: 100%;
+  width: 100%; /* ocupará todo el ancho del contenedor */
+  max-width: 300px; /* límite máximo */
   height: auto;
-  filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.15));
+  filter: drop-shadow(2px 2px 8px rgba(123, 31, 60, 0.3));
+  transition: transform 0.3s ease;
 }
 
-.ihce-text-block {
-  flex: 2;
+.ihce-icon:hover img {
+  transform: scale(1.05);
+}
+
+.ihce-text-columns {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Fila inferior: 2 columnas */
+.ihce-bottom-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ihce-bottom-row .ihce-section {
+  flex: 1;
+}
+
+/* Estilos para las tarjetas */
+.ihce-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #7b1f3c;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ihce-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #7b1f3c, #8b2635, #7b1f3c);
+  border-radius: 8px 8px 0 0;
+}
+
+.ihce-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ihce-section {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .ihce-title {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   color: #7b1f3c;
   font-weight: 700;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ihce-title::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(45deg, #7b1f3c, #8b2635);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ihce-section p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+  text-align: justify;
+}
+
+.ihce-list {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #4a5568;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.ihce-list li {
   margin-bottom: 0.5rem;
   position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
 }
 
-.ihce-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #7b1f3c, #e1b07e);
-  border-radius: 4px;
-  margin-top: 6px;
+.ihce-list li::marker {
+  color: #7b1f3c;
+  font-weight: bold;
 }
 
-.ihce-section p,
-.ihce-list {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.ihce-list {
-  padding-left: 1.2rem;
-  list-style: disc;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .ihce-content {
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ihce-top-row {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .ihce-icon {
-    margin-bottom: 1rem;
+    width: 180px;
+    min-height: 140px;
   }
-
-  .ihce-text-block {
-    text-align: center;
+  
+  .ihce-icon img {
+    width: 100px;
   }
-
-  .ihce-title::after {
-    margin-left: auto;
-    margin-right: auto;
+  
+  .ihce-text-columns {
+    width: 100%;
   }
+  
+  .ihce-bottom-row {
+    flex-direction: column;
+  }
+}
 
+@media (max-width: 768px) {
+  .ihce-container {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .ihce-content {
+    gap: 0.3rem;
+  }
+  
+  .ihce-top-row,
+  .ihce-bottom-row {
+    gap: 0.3rem;
+  }
+  
+  .ihce-card {
+    padding: 1rem;
+  }
+  
+  .ihce-title {
+    font-size: 1rem;
+  }
+  
+  .ihce-section p,
   .ihce-list {
-    text-align: left;
+    font-size: 0.75rem;
   }
 }
