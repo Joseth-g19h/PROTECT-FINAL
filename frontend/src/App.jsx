@@ -6,7 +6,8 @@ import './navbar.css';
 import IHCE from './ihce';
 import './ihce.css';
 import NoticiasCarousel from './noticias'; // Renombrado correctamente
-import './noticias.css';                  // Corrección de ruta y nombre
+import './noticias.css';           
+import Titular from './tituorganismo';       // Corrección de ruta y nombre
 
 function App() {
   return (
@@ -38,6 +39,13 @@ function App() {
       <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
         <NoticiasCarousel />
       </div>
+
+      {/* Sección de Titular */}
+      <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
+        <Titular/>
+      </div>
+
+
     </div>
   );
 }

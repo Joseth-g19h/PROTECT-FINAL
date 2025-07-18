@@ -1,0 +1,73 @@
+.titular-section {
+  max-width: 1000px;
+  margin: 0rem auto;
+}
+
+.titular-heading {
+  text-align: center;
+  color: #9b2241;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.titular-divider {
+  border: none;
+  border-top: 2px solid #9b2241;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+}
+
+.titular-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.titular-image img {
+  width: 200px;
+  border-radius: 50%;
+  border: 10px solid #9b2241;
+}
+
+.titular-text {
+  flex: 1;
+  font-family: 'Arial', sans-serif;
+}
+
+.titular-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #9b2241;
+}
+
+.titular-text h4 {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.titular-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.agenda-btn {
+  margin-top: 1rem;
+  background-color: #f8f0f0;
+  border: 1px solid #9b2241;
+  color: #9b2241;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.agenda-btn:hover {
+  background-color: #701129;
+}
