@@ -10,6 +10,7 @@ function IHCE() {
         <div className="ihce-top-row">
           <div className="ihce-icon">
             <img src="/src/img/Gobierno.svg" alt="IHCE Logo" />
+            <p className="ihce-text"> Instituto Hidalguense de Competitividad Empresarial</p>
           </div>
           
           <div className="ihce-text-columns">

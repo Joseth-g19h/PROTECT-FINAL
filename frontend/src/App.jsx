@@ -1,11 +1,12 @@
 // App.jsx
 import React from 'react';
 import Header from './header';
-import Carousel from './carousel'; // Importar el carrusel
+import Carousel from './carousel';
 import './navbar.css';
-import IHCE from './ihce'; 
-import './ihce.css';       // Importar el estilo correspondiente
-
+import IHCE from './ihce';
+import './ihce.css';
+import NoticiasCarousel from './noticias'; // Renombrado correctamente
+import './noticias.css';                  // Corrección de ruta y nombre
 
 function App() {
   return (
@@ -26,14 +27,17 @@ function App() {
         </ul>
       </div>
 
-      {/* Carrusel debajo del navbar */}
+      {/* Carrusel principal */}
       <div style={{ marginTop: '0', marginLeft: '0', marginRight: '0' }}>
         <Carousel />
       </div>
 
       <IHCE />
 
-
+      {/* Sección de Noticias */}
+      <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
+        <NoticiasCarousel />
+      </div>
     </div>
   );
 }
