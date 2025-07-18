@@ -1,11 +1,15 @@
 import React from 'react';
 import './tituorganismo.css';
-import titularImg from '/src/img/Titular.jpeg'; // Cambia esto según tu ruta
+import titularImg from '/src/img/Titular.jpeg';
+import { FaUserTie } from 'react-icons/fa'; // Ícono profesional
 
 const Titular = () => {
   return (
     <div className="titular-section">
-      <h2 className="titular-heading">TITULAR DEL ORGANISMO</h2>
+      <h2 className="titular-heading">
+        <FaUserTie className="titular-icono" />
+        TITULAR DEL ORGANISMO
+      </h2>
       <hr className="titular-divider" />
 
       <div className="titular-container">

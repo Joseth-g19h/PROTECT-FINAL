@@ -1,0 +1,112 @@
+.ubicacion-section {
+  max-width: 1100px;
+  margin: 0rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ubicacion-titulo {
+  color: #9b2241;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado horizontal */
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.ubicacion-icono {
+  font-size: 1.6rem;
+  color: #9b2241;
+}
+
+.ubicacion-linea {
+  height: 3px;
+  width: 1000px; /* Más larga */
+  background-color: #9b2241;
+  border: none;
+  margin: 0 auto 1.5rem auto; /* Centrado con más espacio abajo */
+}
+.descripcion-ubicacion {
+  font-size: 1.05rem;
+  color: #070707;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mapa-contenedor {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.boton-contenedor {
+  text-align: left;
+}
+
+.boton-mapa {
+  display: inline-block;
+  background-color: #9b2241;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-mapa:hover {
+  background-color: #7a1b35;
+  transform: translateY(-2px);
+}
+
+.referencia-contenedor {
+  margin: 20px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* Agrega esto */
+}
+
+.referencia-titulo {
+  color: #c49e61; /* Color dorado */
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); /* Efecto iluminado más suave */
+  letter-spacing: 1px;
+  white-space: nowrap;
+  flex-shrink: 0; /* Agrega esto */
+}
+
+.referencia-texto {
+  color: #000000; /* Color dorado más suave */
+  font-weight: 500;
+  font-size: 1em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Efecto iluminado muy suave */
+  line-height: 1.4;
+  margin: 0;
+  flex-shrink: 0; /* Agrega esto */
+}
+
+/* Agrega esto para tu botón */
+.boton-mapa {
+  display: inline-block;
+  margin-left: 15px; /* Ajusta este valor para más o menos espacio */
+  /* Tus otros estilos del botón */
+  color: #ffffff !important; /* Color dorado igual al título */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.boton-mapa:hover {
+  color: #c49e61 !important; /* Color dorado más brillante al pasar el mouse */
+}

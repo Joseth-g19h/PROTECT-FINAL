@@ -7,7 +7,8 @@ import IHCE from './ihce';
 import './ihce.css';
 import NoticiasCarousel from './noticias'; // Renombrado correctamente
 import './noticias.css';           
-import Titular from './tituorganismo';       // Corrección de ruta y nombre
+import Titular from './tituorganismo'; 
+import Ubicacion from './ubicacion';
 
 function App() {
   return (
@@ -44,6 +45,11 @@ function App() {
       <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
         <Titular/>
       </div>
+
+      <div>
+      <h1></h1>
+      <Ubicacion/>
+    </div>
 
 
     </div>

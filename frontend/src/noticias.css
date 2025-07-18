@@ -177,3 +177,8 @@
 }
 
 }
+.noti-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  transform: translateY(-3px); /* Ajusta este valor hasta que se vea centrado */
+}

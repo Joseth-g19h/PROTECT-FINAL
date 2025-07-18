@@ -1,6 +1,8 @@
 // noticias.jsx - Carrusel Compacto sin Búsqueda
 import React, { useState, useEffect, useRef } from 'react';
 import './noticias.css';
+import { FaNewspaper } from 'react-icons/fa';
+
 
 const NoticiasCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,7 +41,9 @@ const NoticiasCarousel = () => {
 
   return (
     <div className="noti-section"> {/* ← CONTENEDOR PADRE CENTRAL */}
-      <h2 className="noti-carousel-title">ÚLTIMAS NOTICIAS</h2>
+      <h2 className="noti-carousel-title">
+        <FaNewspaper className="noti-icon" width="15" height="15" style={{verticalAlign: 'middle'}} />
+        ÚLTIMAS NOTICIAS</h2>
       <hr className="noti-carousel-divider" />
 
       <div className="noti-carousel-container">

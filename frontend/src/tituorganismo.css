@@ -4,18 +4,20 @@
 }
 
 .titular-heading {
-  text-align: center;
   color: #9b2241;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado horizontal */
+  gap: 0.5rem;
   margin-bottom: 0.3rem;
-  font-family: 'Arial', sans-serif;
+  text-align: center;
 }
 
 .titular-divider {
   border: none;
-  border-top: 2px solid #9b2241;
+  border-top: 3px solid #9b2241;
   width: 100%;
   margin: 0 auto 2rem auto;
 }
@@ -66,8 +68,4 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
-}
-
-.agenda-btn:hover {
-  background-color: #701129;
 }
