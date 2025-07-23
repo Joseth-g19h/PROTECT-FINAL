@@ -42,19 +42,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 .slide-background img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 120%;
 }
 
 .slide-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -63,7 +58,7 @@
     rgba(0, 0, 0, 0.2) 50%,
     rgba(0, 0, 0, 0.4) 100%
   );
-  z-index: 2;
+
 }
 
 .slide-content {

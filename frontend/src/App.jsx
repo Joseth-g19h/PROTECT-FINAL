@@ -9,49 +9,43 @@ import NoticiasCarousel from './noticias'; // Renombrado correctamente
 import './noticias.css';           
 import Titular from './tituorganismo'; 
 import Ubicacion from './ubicacion';
+import Footer from './footer'; 
+import './navbar.css';// Importar el Footer
+import Navbar from './navbar';
+
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      
-      {/* Navbar vino debajo del header */}
-      <div className="navbar-vino" style={{ marginTop: '60px', marginLeft: '0', marginRight: '0' }}>
-        <div className="nombre-institucion">
-          INSTITUTO HIDALGUENSE DE COMPETITIVIDAD EMPRESARIAL
+      <Navbar /> {/* Asegúrate de importar el Navbar si no lo has hecho ya */}
+
+      {/* Contenido principal */}
+      <main className="main-content">
+       
+          <Carousel />
+
+
+        <IHCE />
+
+        {/* Sección de Noticias */}
+        <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
+          <NoticiasCarousel />
         </div>
-        <ul className="nav-vino-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Transparencia</a></li>
-          <li><a href="#">Agenda de Capacitaciones</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Programas</a></li>
-        </ul>
-      </div>
 
-      {/* Carrusel principal */}
-      <div style={{ marginTop: '0', marginLeft: '0', marginRight: '0' }}>
-        <Carousel />
-      </div>
+        {/* Sección de Titular */}
+        <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
+          <Titular/>
+        </div>
 
-      <IHCE />
+        {/* Sección de Ubicación */}
+        <div>
+          <Ubicacion/>
+        </div>
+      </main>
 
-      {/* Sección de Noticias */}
-      <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
-        <NoticiasCarousel />
-      </div>
-
-      {/* Sección de Titular */}
-      <div style={{ marginTop: '0px', marginLeft: '0', marginRight: '0' }}>
-        <Titular/>
-      </div>
-
-      <div>
-      <h1></h1>
-      <Ubicacion/>
-    </div>
-
-
+      {/* Footer al final */}
+      <Footer />
     </div>
   );
 }

@@ -1,108 +1,244 @@
-/* Elimina espacios por defecto */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Variables CSS para consistencia */
+:root {
+  --wine-color: #9b2241; /* Color vino principal */
+  --gold-color: #f2c641; /* Color dorado para hover */
+  --white: #ffffff;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --header-height: 80px; /* Altura del header */
 }
 
+/* Navbar Vino - Versión Mejorada */
 .navbar-vino {
-  background-color: #9b2241; /* vino */
-  color: white;
+  position: fixed; /* Cambiado de absolute a fixed */
+  top: var(--header-height); /* Posicionado debajo del header */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 2.5rem; /* Mantener el mismo padding del header */
-  font-family: 'Arial', sans-serif;
-  font-size: 0.99rem;
-  flex-wrap: nowrap;
-  width: 100vw; /* Usar 100vw para ocupar todo el ancho de la ventana */
-  box-sizing: border-box;
-  min-height: 60px;
-  overflow: hidden;
-  left: 0; /* Asegurar que empiece desde el borde izquierdo */
-  /* CAMBIO: Agregar margen superior igual a la altura del header */
-  margin: 0 ;
-  margin-top: 70px !important; /* Misma altura que el header (50px) */
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: var(--wine-color);
+  color: var(--white);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
+/* Contenedor interno para centrar contenido */
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+/* Nombre de la institución - Mejorado */
 .nombre-institucion {
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.3rem;
   text-transform: uppercase;
-  flex: 0 0 auto; /* No crecer, no reducir, tamaño automático */
-  margin-left: 0;
-  padding-left: 0;
-  margin-right: 1rem;
-  white-space: nowrap; /* Mantener en una línea */
+  color: var(--white);
+  margin-right: auto;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50%; /* Máximo 50% del ancho */
-  font-size: 0.9rem; /* Tamaño más pequeño para evitar desbordamiento */
+  max-width: 300px;
 }
 
+/* Lista de enlaces - Optimizado */
 .nav-vino-links {
-  list-style: none;
   display: flex;
-  gap: 1.2rem; /* Espacio reducido entre enlaces */
+  list-style: none;
   margin: 0;
   padding: 0;
-  flex-shrink: 1; /* Permitir que se reduzca si es necesario */
-  flex-wrap: nowrap; /* Mantener en una línea */
-  justify-content: flex-end; /* Alinear a la derecha */
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.nav-vino-links li a {
-  color: white;
+.nav-vino-links li {
+  position: relative;
+}
+
+.nav-vino-links a {
+  color: var(--white);
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
-  white-space: nowrap;
-  padding: 0.5rem 0.6rem; /* Padding reducido */
-  border-radius: 4px;
-  font-size: 0.9rem; /* Tamaño más pequeño */
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  display: inline-block;
 }
 
-.nav-vino-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Efecto hover más sutil */
+/* Efecto hover mejorado */
+.nav-vino-links a:hover {
+  color: var(--gold-color);
+  transform: translateY(-2px);
 }
 
-/* Responsive - Solo para pantallas muy pequeñas */
-@media (max-width: 768px) {
+/* Subrayado animado */
+.nav-vino-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-color);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-vino-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Menú hamburguesa - Rediseñado */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  color: var(--gold-color);
+  transform: scale(1.1);
+}
+
+/* Menú móvil - Mejorado */
+.mobile-menu {
+  position: fixed;
+  top: calc(var(--header-height) + 60px); /* Header + navbar */
+  right: 0;
+  width: 280px;
+  height: calc(100vh - var(--header-height) - 60px);
+  background-color: var(--white);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(155, 34, 65, 0.1);
+  padding-bottom: 1rem;
+}
+
+.mobile-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a {
+  color: var(--wine-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+}
+
+.mobile-menu a:hover {
+  color: var(--wine-color);
+  padding-left: 0.5rem;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* Overlay mejorado */
+.menu-overlay {
+  position: fixed;
+  top: calc(var(--header-height) + 60px);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height) - 60px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Design - Mejorado */
+@media screen and (max-width: 992px) {
   .navbar-vino {
-    padding: 0.6rem 1rem;
-    margin-top: 45px; /* Altura del header en móvil (45px) */
-  }
-  
-  .nombre-institucion {
-    font-size: 0.8rem;
-    max-width: 45%;
+    padding: 0.8rem 1.5rem;
   }
   
   .nav-vino-links {
-    gap: 0.8rem;
+    display: none;
   }
-  
-  .nav-vino-links li a {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.8rem;
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nombre-institucion {
+    font-size: 1.1rem;
+    max-width: 200px;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .navbar-vino {
-    padding: 0.5rem 0.8rem;
-    margin-top: 45px; /* Mantener consistente con el media query anterior */
+    padding: 0.8rem 1rem;
   }
   
   .nombre-institucion {
-    font-size: 0.7rem;
-    max-width: 40%;
+    font-size: 1rem;
+    max-width: 150px;
   }
   
-  .nav-vino-links {
-    gap: 0.5rem;
+  .mobile-menu {
+    width: 85%;
+    padding: 1rem;
   }
   
-  .nav-vino-links li a {
-    padding: 0.3rem 0.4rem;
-    font-size: 0.7rem;
+  .mobile-menu li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
   }
+  
+  .mobile-menu a {
+    font-size: 1rem;
+  }
+}
+
+/* Animación para el menú móvil */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active {
+  animation: slideIn 0.3s ease forwards;
 }

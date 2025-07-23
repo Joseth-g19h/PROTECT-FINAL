@@ -1,0 +1,235 @@
+.footer {
+  background: linear-gradient(135deg, #7d1538 0%, #a91c4a 100%);
+  color: white;
+  padding: 20px 20px 10px;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 55px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo section */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.logo-img {
+  display: flex;
+  align-items: center;
+}
+
+.privacy-section {
+  display: flex;
+  align-items: center;
+}
+
+/* MODIFICACIÓN PRINCIPAL: Efecto hover mejorado para aviso de privacidad */
+.privacy-section p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none; /* Removido el underline */
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  color: #c49e61;
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 5px; /* Espacio para la línea */
+}
+
+.privacy-section p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg,#c49e61); /* Línea dorada */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.privacy-section p:hover {
+  color: #c49e61; /* Dorado más brillante */
+  text-shadow: 0 0 8px #c49e61; /* Efecto de iluminación */
+  transform: translateY(-1px); /* Ligero movimiento hacia arriba */
+}
+
+.privacy-section p:hover::after {
+  width: 100%; /* La línea se expande al 100% */
+}
+
+.footer-logo-image {
+  height: 90px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+/* Info section - CORREGIDO */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Agregado para centrar el contenedor */
+  height: 100%;
+  text-align: center;
+}
+
+.info-section p {
+  margin: 0 0 0px 0;
+  font-size: 0.85rem; /* CORREGIDO: ahora coincide con el tamaño deseado */
+  line-height: 1.4;
+  text-align: center; /* Cambiado a center */
+}
+
+.info-section p:first-child {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+/* Contact section */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-section p {
+  margin: 0 0 0px 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.contact-section p:first-child {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/* Texto de redes sociales en la línea principal */
+.footer-social-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-text .social-text {
+  color: #c49e61;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Iconos de redes sociales en línea separada */
+.footer-social-icons {
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social h4 {
+  margin: 0 2px 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+    color: white;
+
+}
+
+.social-link:hover {
+   color: #c49e61
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background: #c49e61;
+  margin: 0 0 10px 0;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .logo-container {
+    justify-content: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer {
+    padding: 30px 15px 20px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+  
+  .footer-social-text {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}

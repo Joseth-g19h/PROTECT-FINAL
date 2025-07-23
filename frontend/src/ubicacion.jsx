@@ -14,7 +14,7 @@ function Ubicacion() {
       <div className="mapa-contenedor">
         <iframe
           title="Ubicación IHCE"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.225162961472!2d-98.76121928563603!3d20.100197986519242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a7782c842d6f%3A0x9a9a8e3f297fd91b!2sInstituto%20Hidalguense%20de%20Competitividad%20Empresarial!5e0!3m2!1ses-419!2smx!4v1657741746796!5m2!1ses-419!2smx"
+          src="https://maps.google.com/maps?q=Instituto+Hidalguense+de+Competitividad+Empresarial,+Pachuca+de+Soto,+Hidalgo&hl=es-419&z=15&output=embed"
           width="100%"
           height="300"
           style={{ border: 0, borderRadius: '8px' }}
